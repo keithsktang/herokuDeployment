@@ -25,6 +25,7 @@ app.controller('deployment', function($scope, $http, $timeout) {
   $scope.deploy = function(version){
     $http.get(`https://vne365avwi.execute-api.us-east-1.amazonaws.com/api/${version}`).then(function(response){
       $scope.awsResponse = response;
+      console.log(response)
     })
   }
 
