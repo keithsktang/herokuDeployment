@@ -22,11 +22,11 @@ app.controller('deployment', function($scope, $http, $timeout) {
       $scope.githubCommit === $scope.herokuCommit ? $scope.newVersion = false : $scope.newVersion = true
     })
   })
-  $scope.deploy = function(version){
-    $http.get(`https://vne365avwi.execute-api.us-east-1.amazonaws.com/api/${version}`).then(function(response){
-      $scope.awsResponse = response;
-      console.log(response)
-    })
+  // $scope.deploy = function(version){
+  //   $http.get(`https://vne365avwi.execute-api.us-east-1.amazonaws.com/api/${version}`).then(function(response){
+  //     $scope.awsResponse = response;
+  //     console.log(response)
+  //   })
   }
 
 
