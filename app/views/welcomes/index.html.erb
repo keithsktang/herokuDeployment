@@ -1,3 +1,17 @@
 <h1>Yay!!  Deployed!!</h1>
 
-<%= @heroku_commit %>
+<div class="commit-table">
+  <div class="git">Heroku current commit</div>
+  <div class="hash">{{herokuCommit}}</div>
+  <div class="git">Github latest commit</div>
+  <div class="hash">{{githubCommit}}</div>
+
+</div>
+
+<div ng-if="!newVersion" class="new-version">
+<div class="diff">You are up-to-date, no deployment needed</div>
+</div>
+
+<div ng-if="newVersion" class="new-version">
+<div class="diff">There is a newer version on GitHub, would you like to deploy it to Heroku?</div>
+<button ng-click="deploy(githubCommit)" class="deploy">Deploy Now</button>
