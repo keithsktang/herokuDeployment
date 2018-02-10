@@ -1,5 +1,5 @@
 var app = angular.module('main', []);
-app.controller('deployment', function($scope, $http, $timeout) {
+app.controller('deployment', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
   $scope.name = "name"
   $http.get("https://api.heroku.com/apps/pure-beach-57030/builds", {
     headers: {
@@ -29,4 +29,4 @@ app.controller('deployment', function($scope, $http, $timeout) {
   //   })
   // }
 
-})
+}])
