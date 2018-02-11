@@ -17,7 +17,10 @@ class WelcomesController < ApplicationController
     #                   'User-Agent' => 'keithsktang'})
     # @git_commit = @git_res.first['sha']
     #
-    # @new_version if @git_commit != @heroku_commit  
+    # @new_version if @git_commit != @heroku_commit
+
+    @key = Rails.application.secrets.HEROKU_KEY
+    # @key = 'herokukey'
 
   end
 

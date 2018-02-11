@@ -5,7 +5,7 @@ app.controller('deployment', ['$scope', '$http', '$timeout', function($scope, $h
     headers: {
       'Accept': 'application/vnd.heroku+json; version=3',
       "Content-Type": "application/json",
-      "Authorization": "Bearer e57a8130-c699-4c2b-b152-4b52be8badc7"
+      "Authorization": process.env.HEROKU_KEY
     }
   }).then(function(response) {
     $scope.herokuCommit = response.data[response.data.length - 1].source_blob.version;
