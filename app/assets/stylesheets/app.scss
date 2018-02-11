@@ -1,0 +1,100 @@
+.wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1.5fr;
+  grid-template-areas: "header header" "heroku github" "deployment deployment";
+  color: #444;
+  height: 100vh;
+  font-size: 1.5em;
+  /* justify-items: center; */
+  .cell {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+
+    .box {
+      text-align: center;
+    }
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: skyblue;
+}
+
+.heroku {
+  grid-area: heroku;
+}
+
+.github {
+  grid-area: github;
+
+  &.diff {
+    background-color: #ff7f50;
+  }
+}
+
+.commit {
+  background-color: #DAF7A6;
+img{
+  height: 200px;
+}
+  .hash {
+    border: 5px #444 solid;
+    background-color: #F9E79F;
+    color: #444;
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+.deployment {
+  grid-area: deployment;
+  background-color: skyblue;
+  position: relative;
+
+  .box {
+    width: 80%;
+    position: relative;
+  }
+
+  .deploy {
+    position: relative;
+    background-color: steelblue;
+    color: #ddd;
+    border: 2px white solid;
+    padding: 20px;
+    width: 100%;
+    margin: 20px;
+
+    &:hover {
+      background-color: #4E92CA;
+    }
+  }
+
+  .fa-sync {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2em;
+    color: #ddd;
+    display: none;
+  }
+
+  .awsResponse {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+#key {
+  opacity: 0;
+}
