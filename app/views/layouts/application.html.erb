@@ -11,7 +11,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body ng-app="main" ng-controller="deployment">
+  <body ng-app="main" ng-controller="deployment" ng-init="init(<%@key%>)">
     <%= yield %>
     <!-- <script src="main.js" charset="utf-8"></script> -->
   </body>
