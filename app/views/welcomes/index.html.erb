@@ -6,14 +6,14 @@
 
   <div class="cell heroku commit">
     <div class="box">
-      <img src="assets/heroku.png" alt="">
+      <img src=<%= asset_path('heroku.png') %> alt="">
       <div class="remote">Current commit on Heroku</div>
       <div class="hash">{{herokuCommit}}</div>
     </div>
   </div>
   <div class="cell github commit">
     <div class="box">
-      <img src="assets/Octocat.png" alt="">
+      <img src=<%= asset_path('Octocat.png') %> alt="">
       <div class="remote">Current commit on Github</div>
       <div class="hash">{{githubCommit}}</div>
     </div>
@@ -66,7 +66,7 @@
             <td>{{awsResponse.updated_at}}</td>
           </tr>
         </table>
-      <div style="color: red">Deployment completed!</div>  
+      <div style="color: red">Deployment completed!</div>
       </div>
     </div>
   </div>
