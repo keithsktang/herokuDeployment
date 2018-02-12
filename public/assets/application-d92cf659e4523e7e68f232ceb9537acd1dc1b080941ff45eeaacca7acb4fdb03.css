@@ -1,0 +1,231 @@
+/* line 1, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1.5fr;
+  grid-template-areas: "header header" "heroku github" "deployment deployment";
+  color: #444;
+  height: 100vh;
+  font-size: 1.5em;
+  /* justify-items: center; */
+}
+/* line 11, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.wrapper .cell {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+}
+/* line 17, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.wrapper .cell .box {
+  text-align: center;
+}
+
+/* line 23, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.header {
+  grid-area: header;
+  background-color: skyblue;
+}
+
+/* line 28, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.heroku {
+  grid-area: heroku;
+}
+
+/* line 32, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.github {
+  grid-area: github;
+}
+/* line 35, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.github.diff {
+  background-color: #ff7f50;
+}
+
+/* line 40, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.commit {
+  background-color: #DAF7A6;
+}
+/* line 43, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.commit img {
+  height: 200px;
+}
+/* line 47, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.commit .hash {
+  border: 5px #444 solid;
+  background-color: #F9E79F;
+  color: #444;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* line 56, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment {
+  grid-area: deployment;
+  background-color: skyblue;
+  position: relative;
+}
+/* line 61, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .box {
+  width: 80%;
+  position: relative;
+}
+/* line 66, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .deploy {
+  position: relative;
+  background-color: steelblue;
+  color: #ddd;
+  border: 2px white solid;
+  padding: 20px;
+  width: 100%;
+  margin: 20px;
+}
+/* line 75, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .deploy:hover {
+  background-color: #4E92CA;
+}
+/* line 80, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .fa-sync {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+  color: #ddd;
+  display: none;
+}
+/* line 89, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .awsResponse {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 99, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .awsResponse table th {
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
+}
+/* line 105, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+.deployment .awsResponse table td {
+  padding: 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* line 114, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/app.scss */
+#key {
+  opacity: 0;
+}
+/* line 1, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/wuji/Desktop/projects/work/herokuDeployment/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
