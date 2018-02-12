@@ -47,8 +47,8 @@ app.controller('deployment', ['$scope', '$http', '$timeout', function($scope, $h
     $('.fa-sync').show();
     $http.get('https://vne365avwi.execute-api.us-east-1.amazonaws.com/api/' + version).then(function(response) {
       $scope.awsStatus = response.status;
-      $scope.awsVersion = response.data.source_blob.version;
-      $scope.herokuCommit = $scope.awsVersion;
+      $scope.awsResponse = response.data;
+      $scope.herokuCommit = $scope.awsResponse.source_blob.version;
       $scope.githubCommit === $scope.herokuCommit ? sameVersion(false) : diffVersion(false);
       $('.fa-sync').hide();
       $('.awsResponse').show();

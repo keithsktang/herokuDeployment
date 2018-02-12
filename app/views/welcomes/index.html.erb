@@ -39,9 +39,34 @@
         <div class="deploy-text">Deploy Now</div>
       </button>
       <i class="fas fa-sync fa-spin"></i>
-      <div class="awsResponse">AWS Lambda status
-        {{awsStatus}}!
-        <br/>
-        Deployment completed!</div>
+      <div class="awsResponse">
+        <table>
+          <tr>
+            <th>AWS Lambda status:</th>
+            <td>{{awsStatus}}</td>
+          </tr>
+          <tr>
+            <th>app id</th>
+            <td>{{awsResponse.app.id}}</th>
+          </tr>
+          <tr>
+            <th>output stream url:</th>
+            <td><a ng-href="{{awsResponse.output_stream_url}}">{{awsResponse.output_stream_url}}</a></td>
+          </tr>
+          <tr>
+            <th>version:</th>
+            <td>{{awsResponse.source_blob.version}}</td>
+          </tr>
+          <tr>
+            <th>status:</th>
+            <td>{{awsResponse.status}}</td>
+          </tr>
+          <tr>
+            <th>updated at:</th>
+            <td>{{awsResponse.updated_at}}</td>
+          </tr>
+        </table>
+      <div style="color: red">Deployment completed!</div>  
+      </div>
     </div>
   </div>
